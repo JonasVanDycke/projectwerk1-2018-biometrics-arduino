@@ -14,6 +14,7 @@ void loop() {
   for(int i = 0; i < numberOfValues; i++) {
     Serial.print(values[i]);
     Serial.print(separatorChar);
+    values[i]++;
   }
   Serial.print(endChar);
   delay(delayTime);
