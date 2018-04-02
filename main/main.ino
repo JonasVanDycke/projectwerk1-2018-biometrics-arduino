@@ -1,25 +1,38 @@
-#include <LiquidCrystal.h>
+//int S1=A4;
+//heartRate
+  int PulseSensor = A5;
+  int LED13 = 13;                                    
+  double alpha = 0.75;
+  int period = 1;
+  double change = 0.0;
 
+//ValueCounter
+  double value1 = 100.00;
+  double value2 = 123;
+#include <LiquidCrystal.h>
 LiquidCrystal lcd(8, 9, 4, 5, 6, 7);
 
-double value1 = 100.00;
-double value2 = 123;
+//ValueCounter
+  void ValueCounter();
+//heartRate
+  void heartRate();
+
+
 
 void setup() {
-  Serial.begin(115200);
+//  pinMode(S1,INPUT);
+  pinMode(PulseSensor,INPUT);
+  pinMode(LED13,OUTPUT);
   lcd.begin(16, 2);
+  lcd.clear();
+  Serial.begin (115200);
 }
 
-void loop() {
-  lcd.setCursor(0,0);
-  lcd.print("Value1: " + String(value1));
-  lcd.setCursor(0,1);
-  lcd.print("Value2: " + String(value2));
-  
-  Serial.print(String("[") + value1 + String("|") + value2 + String("]"));
-  Serial.print("\n");
-  delay(500);
 
-  value1++;
-  value2++;
+
+void loop() {
+//  if(digitalRead(S1)==LOW)
+//    {ValueCounter();}
+    if(digitalRead(PulseSensor)==LOW)
+      {heartRate();}
 }
