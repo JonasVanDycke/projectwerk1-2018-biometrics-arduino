@@ -1,3 +1,7 @@
+double getTemperature() {
+    
+}
+
 /*void Temperature(){
 
 #include <Wire.h> // Used to establied serial communication on the I2C bus

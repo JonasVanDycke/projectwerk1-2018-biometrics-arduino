@@ -2,10 +2,7 @@
 //heartRate
 int PulseSensor = A1;
 int LED13 = 13;
-double alpha = 0.75;
 int delayTime = 500;
-double change = 0.0;
-void heartRate();
 
 //LCD scherm 16x2
 #include <LiquidCrystal.h>
@@ -16,7 +13,7 @@ void setup() {
   //LCD scherm 16x2
   lcd.begin(16, 2);
   lcd.clear();
-  Serial.begin (115200);
+  Serial.begin(115200);
 
   //heartRate
   pinMode(PulseSensor, INPUT);
@@ -25,5 +22,6 @@ void setup() {
 
 
 void loop() {
-       heartRate();
+    double values[] = {0, 0, 0, 0, getHeartRate()};
+    printDoubleArray(values);
 }
