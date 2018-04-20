@@ -1,9 +1,3 @@
-double getTemperature() {
-    
-}
-
-/*void Temperature(){
-
 #include <Wire.h> // Used to establied serial communication on the I2C bus
 #include "SparkFunTMP102.h" // Used to send and recieve specific information from our sensor
 
@@ -21,7 +15,7 @@ TMP102 sensor0(0x48); // Initialize sensor at I2C address 0x48
 //  SDA - 0x4A
 //  SCL - 0x4B
 
-void setup() {
+void setupTemperatureSensor() {
   Serial.begin(9600); // Start serial communication at 9600 baud
   pinMode(ALERT_PIN,INPUT);  // Declare alertPin as an input
   sensor0.begin();  // Join I2C bus
@@ -48,16 +42,17 @@ void setup() {
   sensor0.setExtendedMode(0);
 
   //set T_HIGH, the upper limit to trigger the alert on
-  sensor0.setHighTempF(85.0);  // set T_HIGH in F
-  //sensor0.setHighTempC(29.4); // set T_HIGH in C
+  //sensor0.setHighTempF(85.0);  // set T_HIGH in F
+  sensor0.setHighTempC(29.4); // set T_HIGH in C
   
   //set T_LOW, the lower limit to shut turn off the alert
-  sensor0.setLowTempF(84.0);  // set T_LOW in F
-  //sensor0.setLowTempC(26.67); // set T_LOW in C
+  //sensor0.setLowTempF(84.0);  // set T_LOW in F
+  sensor0.setLowTempC(26.67); // set T_LOW in C
 }
- 
-void loop()
-{
+
+double getTemperature() {
+  double d = 0;
+  return d;
   float temperature;
   boolean alertPinState, alertRegisterState;
   
@@ -66,8 +61,8 @@ void loop()
   sensor0.wakeup();
 
   // read temperature data
-  temperature = sensor0.readTempF();
-  //temperature = sensor0.readTempC();
+  //temperature = sensor0.readTempF();
+  temperature = sensor0.readTempC();
 
   // Check for Alert
   alertPinState = digitalRead(ALERT_PIN); // read the Alert from pin
@@ -78,15 +73,4 @@ void loop()
   sensor0.sleep();
 
   // Print temperature and alarm state
-  Serial.print("Temperature: ");
-  Serial.print(temperature);
-  
-  Serial.print("\tAlert Pin: ");
-  Serial.print(alertPinState);
-  
-  Serial.print("\tAlert Register: ");
-  Serial.println(alertRegisterState);
-  
-  delay(1000);  // Wait 1000ms
 }
-*/

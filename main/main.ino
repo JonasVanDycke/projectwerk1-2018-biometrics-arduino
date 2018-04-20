@@ -18,10 +18,13 @@ void setup() {
   //heartRate
   pinMode(PulseSensor, INPUT);
   pinMode(LED13, OUTPUT);
+
+  //Temperature
+  setupTemperatureSensor();
 }
 
 
 void loop() {
-    double values[] = {0, 0, 0, 0, getHeartRate()};
+    double values[] = {getTemperature(), 0, 0, 0, getHeartRate()};
     printDoubleArray(values);
 }
