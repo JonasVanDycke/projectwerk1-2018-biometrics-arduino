@@ -1,7 +1,6 @@
 //Video link:  https://www.youtube.com/watch?v=82T_zBZQkOE
 void heartRate(){
-  
-  static double oldValue = 0;
+    static double oldValue = 0;
     static double oldChange = 0;
     int rawValue = analogRead (PulseSensor);                                         // Reading the sensors values
     double value = alpha * oldValue + (1 - alpha) * rawValue;         // calculating values using the formula
@@ -20,8 +19,5 @@ void heartRate(){
     lcd.print("BPM: ");
     lcd.print(value2);
     delay(period);
-    delay(500);
- 
-
-    }
+ }
 

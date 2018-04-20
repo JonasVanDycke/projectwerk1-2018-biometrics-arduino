@@ -1,3 +1,4 @@
+/*
 //https://www.youtube.com/watch?v=DsTa366PIKg
 // https://github.com/sparkfun/SparkFun_MMA8452Q_Arduino_Library/tree/V_1.1.0
 void Accelerometer(){
@@ -114,7 +115,6 @@ void printOrientation() {
   Serial.println(); //Pula Linha
 
   delay(500);  // Delay para ajudar na visibilidade das leitura
-  */
 }
-
+*/
 

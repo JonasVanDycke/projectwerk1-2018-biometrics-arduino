@@ -1,28 +1,4 @@
-void Temperature(){
-/******************************************************************************
-TMP102_example.ino
-Example for the TMP102 I2C Temperature Sensor
-Alex Wende @ SparkFun Electronics
-April 29th 2016
-~
-
-This sketch configures the TMP102 temperature sensor and prints the
-temperature and alert state (both from the physical pin, as well as by
-reading from the configuration register.
-
-Resources:
-Wire.h (included with Arduino IDE)
-SparkFunTMP102.h
-
-Development environment specifics:
-Arduino 1.0+
-Hardware Version 13
-
-This code is beerware; if you see me (or any other SparkFun employee) at
-the local, and you've found our code helpful, please buy us a round!
-
-Distributed as-is; no warranty is given.   
-******************************************************************************/
+/*void Temperature(){
 
 #include <Wire.h> // Used to establied serial communication on the I2C bus
 #include "SparkFunTMP102.h" // Used to send and recieve specific information from our sensor
@@ -109,5 +85,4 @@ void loop()
   
   delay(1000);  // Wait 1000ms
 }
-}
-
+*/
