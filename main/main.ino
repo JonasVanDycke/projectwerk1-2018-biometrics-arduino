@@ -3,7 +3,7 @@
 int PulseSensor = A1;
 int LED13 = 13;
 double alpha = 0.75;
-int period = 500;
+int delayTime = 500;
 double change = 0.0;
 void heartRate();
 

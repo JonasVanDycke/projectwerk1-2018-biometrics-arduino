@@ -6,10 +6,10 @@ void heartRate(){
     double value = alpha * oldValue + (1 - alpha) * rawValue;         // calculating values using the formula
     int x = rawValue/5;
     int value2 = 6000/x;
+
+    double values[] = {0, 0, 0, 0, value2};
+    print(values);
     
-    Serial.print (rawValue);              // printing the sensor output value on the screen
-    Serial.print (",");                                                                                          
-    Serial.println (value);             // printing the heart beat value on the screen
     oldValue = value;
 
     lcd.setCursor(0,0);
@@ -18,6 +18,6 @@ void heartRate(){
     lcd.setCursor(0,1);
     lcd.print("BPM: ");
     lcd.print(value2);
-    delay(period);
+    delay(delayTime);
  }
 
