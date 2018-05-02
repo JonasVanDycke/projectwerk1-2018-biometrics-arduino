@@ -25,6 +25,8 @@ void setup() {
 
 
 void loop() {
+  
     double values[] = {getTemperature(), 0, 0, 0, getHeartRate()};
     printDoubleArray(values);
+    
 }
