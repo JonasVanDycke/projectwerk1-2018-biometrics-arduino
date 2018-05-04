@@ -1,7 +1,5 @@
 #include <Wire.h> // Used to establied serial communication on the I2C bus
 #include "SparkFunTMP102.h" // Used to send and recieve specific information from our sensor
-#include <LiquidCrystal.h>
-LiquidCrystal lcd(8, 9, 4, 5, 6, 7);
 
 // Connections
 // VCC = 3.3V
@@ -18,10 +16,7 @@ TMP102 sensor0(0x48); // Initialize sensor at I2C address 0x48
 //  SCL - 0x4B
 
 
-void setupTemperatureSensor() {
- lcd.begin(16, 2);
-  lcd.clear();
-  Serial.begin(9600); // Start serial communication at 9600 baud
+void setupTemperature() {
   pinMode(ALERT_PIN,INPUT);  // Declare alertPin as an input
   sensor0.begin();  // Join I2C bus
 

@@ -8,7 +8,7 @@
 int sensorValue ;
 int KeyTable[31];
 
-void Button()
+void setupButton()
 {
   GenerateKeyTable(analogRead(A0),KeyTable);
 }

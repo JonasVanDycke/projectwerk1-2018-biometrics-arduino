@@ -1,7 +1,8 @@
+/*
 #include <LiquidCrystal.h>
 LiquidCrystal lcd(8, 9, 4, 5, 6, 7);
 
-void Lcd()
+void setupLcd()
 {
   lcd.begin(16, 2);
   lcd.clear();
@@ -45,4 +46,4 @@ void showMain()
   lcd.setCursor(7,1);
   lcd.print("Back:D");
 }
-
+*/
