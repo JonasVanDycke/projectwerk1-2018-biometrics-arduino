@@ -11,5 +11,4 @@ void printDoubleArray(double values[]) {
     values[i] = values[i];
   }
   Serial.print(endChar);
-  delay(delayTime);
 }

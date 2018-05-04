@@ -1,4 +1,4 @@
-/*
+
 //https://www.youtube.com/watch?v=DsTa366PIKg
 // https://github.com/sparkfun/SparkFun_MMA8452Q_Arduino_Library/tree/V_1.1.0
 void Accelerometer(){
@@ -86,14 +86,9 @@ void printOrientation() {
   }
 }
 
+
   
   
-  
-  
-  
-  
-  
-  /*
   int acelCont[3];  // VÃ¡riÃ¡vel que armazena os valores das leituras de 12-bit
   readAccelData(acelCont);  // Leitura de todos os eixos do sensor
   float acelG[3];  // VariÃ¡vel para armazenar os valores da aceleraÃ§Ã£o em g (9,8 m/sÂ²)
@@ -116,5 +111,5 @@ void printOrientation() {
 
   delay(500);  // Delay para ajudar na visibilidade das leitura
 }
-*/
+
 

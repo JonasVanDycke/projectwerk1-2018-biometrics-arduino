@@ -1,27 +1,32 @@
-void showHeartRate()
+#include <LiquidCrystal.h>
+LiquidCrystal lcd(8, 9, 4, 5, 6, 7);
+
+void Lcd()
+{
+  lcd.begin(16, 2);
+  lcd.clear();
+}
+
+void showHeartRate(double heartRate)
 {
   lcd.setCursor(0,0);
   lcd.print("Heart Rate: ");
   lcd.print(heartRate);
-  lcd.setCursor(0,1);
-  lcd.print("BPM: ");
-  lcd.print(bpm);
-  lcd.print("   ");
 }
 
 
-void showAccelerometer()
+void showAccelerometer(double x, double y, double z)
 {
   lcd.setCursor(0,0);
-  lcd.print("X:"accel.x, 3);
+  lcd.print("X:"x, 3);
   lcd.setCursor(7,0);
-  lcd.print("Y:"accel.y, 3);
+  lcd.print("Y:"y, 3);
   lcd.setCursor(0,1);
-  lcd.print("Z:"accel.z, 3);
+  lcd.print("Z:"z, 3);
 }
 
 
-void showTemperature()
+void showTemperature(double temperature)
 {
   lcd.setCursor(0,0);
   lcd.print("Temp:"temperature, 3);
