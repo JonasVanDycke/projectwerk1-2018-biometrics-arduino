@@ -6,7 +6,7 @@ void setupLcd()
   lcd.begin(16, 2);
   lcd.clear();
 }
-
+/*
 void LcdOnScreen(double values[]){
   //lcd.clear();
   lcd.setCursor(0,0);
@@ -26,7 +26,7 @@ void LcdOnScreen(double values[]){
   lcd.print("Z:");
   lcd.print(values[3]);
 }
-
+*/
 void showHeartRate(double heartRate)
 { 
   lcd.clear();

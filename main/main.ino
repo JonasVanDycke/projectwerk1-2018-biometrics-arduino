@@ -2,32 +2,31 @@ int delayTime = 500;
 
 void setupAccelerometer();
 void setupButton();
-//void ButtonSetup();
+void ButtonSetup();
 void setupHeartRate();
 void setupLcd();
 void setupSerialController();
 void setupTemperature();
-//void showHeartRate();
-//void showAcceleration();
-//void showTemperature();
-//void showMain();
-void LcdOnScreen();
+void showHeartRate();
+void showAcceleration();
+void showTemperature();
+void showMain();
+//void LcdOnScreen();
 
 void setup() {
   setupAccelerometer();
   setupButton();
-//  ButtonSetup();
+  ButtonSetup();
   setupHeartRate();
   setupLcd();
   setupSerialController();
   setupTemperature();
-//  showMain();
-  void LcdOnScreen();
+  showMain();
+  //void LcdOnScreen();
 }
 
 void loop() {
-  void LcdOnScreen();
-  //ButtonSetup();
+  //void LcdOnScreen();
   
   double accel[3];
   getAcceleration(accel[0], accel[1], accel[2]);
