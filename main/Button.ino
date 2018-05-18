@@ -6,7 +6,7 @@
 #define Rleft  ((unsigned long)47)  
 #define Rright ((unsigned long)39)  
 #define Rselect  ((unsigned long)28) 
-
+/*
 #define LEFT_BUTTON     0
 #define UP_BUTTON       1
 #define DN_BUTTON       2
@@ -15,9 +15,10 @@
 #define UNDEFINED       5
 
 int buttonindex;
- 
+ */
 int sensorValue ;
 int KeyTable[31];
+/*
 int buttonValue = 1023;
 
 void ButtonSetup(){
@@ -48,7 +49,7 @@ void ButtonSetup(){
         lcd.clear();
         showMain();
         delay(400);
-      }*/
+      }*//*
     
     while (buttonValue < 1000) 
     {
@@ -56,7 +57,7 @@ void ButtonSetup(){
     }  // sit in this loop till key unpressed
 
 }
-
+*/
 
 
 

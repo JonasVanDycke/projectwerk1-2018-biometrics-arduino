@@ -6,30 +6,37 @@ void setupLcd()
   lcd.begin(16, 2);
   lcd.clear();
 }
-/*
-void LcdOnScreen(double values[]){
+
+void LcdOnScreen(double temperature, double x, double y, double z, double heartRate){
   //lcd.clear();
-  lcd.setCursor(0,0);
+  lcd.setCursor(1,0);
   lcd.print("HR:");
-  lcd.print(values[4]);
-  lcd.setCursor(8,0);
-  lcd.print("Temp:");
-  lcd.print(values[0]);
+  lcd.print(heartRate);
+  lcd.setCursor(7,0);
+  lcd.print("    ");
+  lcd.setCursor(10,0);
+  lcd.print("X");
+  lcd.print(x);
+  lcd.setCursor(15,0);
+  lcd.print(" ");
   lcd.setCursor(0,1);
-  lcd.print("X:");
-  lcd.print(values[1]);
+  lcd.print("T:");
+  lcd.print(temperature);
+  lcd.setCursor(4,1);
   lcd.print(" ");
   lcd.setCursor(5,1);
-  lcd.print("Y:");
-  lcd.print(values[2]);
+  lcd.print("Y");
+  lcd.print(y);
   lcd.setCursor(10,1);
-  lcd.print("Z:");
-  lcd.print(values[3]);
+  lcd.print(" ");
+  lcd.setCursor(11,1);
+  lcd.print("Z");
+  lcd.print(z);
 }
-*/
+
 void showHeartRate(double heartRate)
 { 
-  lcd.clear();
+  //lcd.clear();
   lcd.setCursor(0,0);
   lcd.print("Heart Rate:");
   lcd.print(heartRate);
@@ -40,7 +47,7 @@ void showHeartRate(double heartRate)
 
 void showAcceleration(double x, double y, double z)
 { 
-  lcd.clear();
+  //lcd.clear();
   lcd.setCursor(0,0);
   lcd.print("X:");
   lcd.print(x);
@@ -57,7 +64,7 @@ void showAcceleration(double x, double y, double z)
 
 void showTemperature(double temperature)
 { 
-  lcd.clear();
+  //lcd.clear();
   lcd.setCursor(0,0);
   lcd.print("Temp:");
   lcd.print(temperature);
@@ -66,7 +73,7 @@ void showTemperature(double temperature)
   lcd.print("                ");
 }
 
-
+/*
 void showMain()
 {
   lcd.clear();
@@ -78,4 +85,4 @@ void showMain()
   lcd.print("XYZ:U");
   lcd.setCursor(7,1);
   lcd.print("Back:D");
-}
+}*/
